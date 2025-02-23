@@ -1,3 +1,3 @@
-module github.com/Arpitmovers/todolist
+module github.com/Arpitmovers
 
 go 1.22.2

@@ -14,6 +14,7 @@ func main() {
 	}
 
 	command := os.Args[1]
+	fmt.Println("command is ", command)
 
 	switch command {
 	case "add":
@@ -31,7 +32,7 @@ func main() {
 			return
 		}
 		for _, task := range tasks {
-			fmt.Printf("%d: %s [%t]\n", task.ID, task.Title, task.Completed)
+			fmt.Printf("%d: %s [%t]\n", task.Id, task.Title, task.Completed)
 		}
 
 	default:

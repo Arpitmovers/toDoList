@@ -9,13 +9,13 @@ func AddTask(title string) {
 	tasks, err := LoadTasks()
 
 	if err != nil {
-		fmt.Println("err ", err)
+		fmt.Println("err in load task ", err)
 	}
-	newTask := Task{id: len(tasks) + 1, Title: title, CreatedAt: time.Now()}
+	newTask := Task{Id: len(tasks) + 1, Title: title, CreatedAt: time.Now()}
 	tasks = append(tasks, newTask)
 
-	//	SaveTasks(tasks)
-	fmt.Println("Task added:", title)
+	SaveTasks(tasks)
+	fmt.Println("Task added:", title, tasks)
 }
 
 // func ListTasks() {
